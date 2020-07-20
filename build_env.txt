@@ -1,0 +1,20 @@
+# Create Virtual Environment (Normal)
+virtualenv MachineLearning
+
+# Create Virtual Environment (Server)
+virtualenv -p /opt/anaconda/anaconda3/bin/python3 MachineLearning
+
+# Active Virtual Environment
+source MachineLearning/bin/activate
+
+# Pyenv virtualenv
+pyenv virtualenv 3.6.8 MachineLearning
+pyenv local MachineLearning
+
+# Install packages (Normal)
+pip install pylint pynvim pandas matplotlib scikit-learn kaggle tensorboard opencv-python gensim gdown lime nltk
+pip install torch torchvision
+
+# Install packages (Server)
+pip install pylint pynvim pandas matplotlib scikit-learn kaggle tensorboard opencv-python gensim gdown lime nltk
+pip install torch==1.4.0+cu92 torchvision==0.5.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
